@@ -1,0 +1,60 @@
+:root {
+  --purple: #5425AF;
+  --mediumSlateBlue: #845EEE;
+  --mediumPurple: #845EEE4D;
+
+  --black: #121826;
+  --DarkSlateGray: #212936;
+  --darklightGray: #394150;
+  --dimGray: #4D5562;
+  --darkGray: #A1A1A9;
+  --gainsboro: #E5E7EB;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--black);
+  font-family: "Inter", Arial, sans-serif;
+}
+
+
+h1 {
+  color: var(--gainsboro);
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding: 2.5rem 0 0 1.875rem;
+}
+
+.div-btn {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.div-btn button {
+  background: linear-gradient(180deg, #845eee 0%, #652cd1 100%);;
+  border-radius: 1.875rem;
+  border: none;
+  color: var(--gainsboro);
+  padding: 0.75rem 1.95rem;
+  cursor: pointer;
+} 
+
+.author-info {
+  font-size: 0.688rem;
+  text-align: center;
+  margin-top: 16px;
+  color: rgb(55, 65, 81);
+}
+
+.author-info a {
+  text-decoration: none;
+}

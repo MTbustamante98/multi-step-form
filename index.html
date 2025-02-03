@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Multi-step Register Form | devChallenges.io</title>
+  </head>
+  <body>
+    <main>
+      <section class="first-content">
+        <section class="stepOne">
+          <h1>Register</h1>
+          <form class="fields">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name"></input>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Example@gmail.com"></input>
+          </form>
+          <div class="div-btn">
+            <button>Continue</button>
+          </div>
+        </section>
+        <div class="count">
+          <p>Step <span>1</span> of 3</p>
+          <div class="information-circle">
+            <span id="startDecStepOne" class="dec"></span>
+            <span class="dec"></span>
+            <span class="dec"></span>
+          </div>
+        </div>
+      </section>
+      <section class="second-content">
+        <section class="stepTwo">
+          <h1>Which topics you are interested in?</h1>
+          <form class="list">
+              <ul>
+                <li>
+                  <input type="checkbox" id="option1">
+                  <label for="option1">Software Development</label>
+                </li>
+                <li>
+                  <label for="option2">
+                    <input type="checkbox" id="option2">User Experience
+                  </label>
+                </li>
+                <li>
+                  <label for="option3">
+                    <input type="checkbox" id="option3">Graphic Design
+                  </label>
+                </li>
+              </ul>
+          </form>
+          <div class="div-btn">
+            <button>Continue</button>
+          </div>
+        </section>
+        <div class="count">
+          <p>Step <span>2</span> of 3</p>
+          <div class="information-circle">
+            <span class="dec"></span>
+            <span id="startDecStepTwo" class="dec"></span>
+            <span class="dec"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="third-content">
+        <section class="stepThree">
+          <h1>Summary</h1>
+          <div class="user-information">
+            <p class="p-value">Name:<span data-value></span></p>
+            <p class="p-value">Email:<span data-value></span></p>
+          </div>
+          <div class="list-topics">
+            <p class="p-value">Topics:</p>
+            <ul>
+              <li data-information></li>
+              <li data-information></li>
+            </ul>
+          </div>
+          <div class="div-btn">
+            <button>Continue</button>
+          </div>
+        </section>
+        <div class="count">
+          <p>Step <span>2</span> of 3</p>
+          <div class="information-circle">
+            <span class="dec"></span>
+            <span class="dec"></span>
+            <span id="startDecStepThree" class="dec"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- <div class="author-info">
+      Coded by <a href="#">Your Name Here</a> | Challenge by
+      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
+        >devChallenges.io</a
+      >.
+    </div> -->
+    <script src="dist/main.js"></script>
+  </body>
+</html>
