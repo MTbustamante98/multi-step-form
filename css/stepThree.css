@@ -1,5 +1,5 @@
 .third-content {
-  display: none;
+  display: block;
 }
 
 .stepThree {
@@ -72,8 +72,9 @@
   padding: 0.325rem 0 2.5rem 1.875rem;
 }
 
-.list-topics li {
+.list-topics li a {
   color: var(--gainsboro);
+  text-decoration: none;
 }
 
 .list-topics li:first-child {

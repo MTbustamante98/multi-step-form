@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack:///./js/script.js?");
+eval("//Sections\nvar stepOne = document.querySelector(\".first-content\");\nvar stepTwo = document.querySelector(\".second-content\");\nvar stepThree = document.querySelector(\".third-content\");\n\n//Input's\nvar inputName = document.getElementById(\"name\");\nvar inputEmail = document.getElementById(\"email\");\nvar listLI = document.querySelectorAll(\".list li\");\nvar checkbox = document.querySelectorAll(\"input[type='checkbox']\");\n\n//Third-content elements\nvar spanValueName = document.querySelector(\"[data-value-name]\");\nvar spanValueEmail = document.querySelector(\"[data-value-email]\");\nvar dataInformation = document.querySelector(\"[data-information]\");\n\n//Button\nvar btn = document.querySelector(\"button\");\n\n//# sourceURL=webpack:///./js/script.js?");
 
 /***/ })
 
