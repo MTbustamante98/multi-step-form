@@ -12,7 +12,49 @@ const checkbox = document.querySelectorAll("input[type='checkbox']");
 //Third-content elements
 const spanValueName = document.querySelector("[data-value-name]");
 const spanValueEmail = document.querySelector("[data-value-email]");
-const dataInformation = document.querySelector("[data-information]");
+const dataInformation = document.querySelectorAll("[data-information]");
 
 //Button
-const btn = document.querySelector("button");
+const buttonStepOne = document.querySelector(".btnOne");
+const buttonStepTwo = document.querySelector(".btnTwo");
+const btnSubmit = document.getElementById("last-button-submit");
+
+//events
+const events = ["click", "touchstart"];
+const activeClass = "ativo";
+
+const arraySections = [stepOne, stepTwo];
+
+function handleClick(event) {
+  if (event) event.preventDefault();
+  arraySections.forEach((elements) => {
+    elements.classList.add(activeClass);
+  });
+}
+
+function handleClickTwo(event) {
+  if (event) event.preventDefault();
+  arraySections[1].classList.remove(activeClass);
+  stepThree.style.display = "block";
+}
+
+function stepSucess(event) {
+  if (event) event.preventDefault();
+  alert("Sucess");
+}
+
+if (Array.isArray(events) && events.length > 0) {
+  events.forEach((eventType) => {
+    buttonStepOne.addEventListener(eventType, handleClick);
+    buttonStepTwo.addEventListener(eventType, handleClickTwo);
+    if (eventType === "submit") {
+      btnSubmit.addEventListener("submit", (event) => {
+        stepSucess();
+      });
+    } else {
+      btnSubmit.addEventListener(eventType, stepSucess);
+    }
+  });
+} else {
+  console.error("Error: The 'events' array is either empty or not defined.");
+}

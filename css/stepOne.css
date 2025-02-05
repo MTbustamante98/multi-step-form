@@ -2,6 +2,10 @@
   display: block;
 }
 
+.first-content.ativo {
+  display: none;
+}
+
 .stepOne {
   background-color: var(--DarkSlateGray) !important;
   width: 500px;

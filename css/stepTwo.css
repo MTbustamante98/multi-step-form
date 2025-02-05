@@ -1,4 +1,8 @@
 .second-content {
+  display: none;
+}
+
+.second-content.ativo {
   display: block;
 }
 
