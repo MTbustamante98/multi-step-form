@@ -2,6 +2,10 @@
   display: none;
 }
 
+.third-content.ativo {
+  display: block;
+}
+
 .stepThree {
   background-color: var(--DarkSlateGray) !important;
   width: 500px;
@@ -58,7 +62,8 @@
   margin-bottom: 0.3rem;
 }
 
-[data-value] {
+[data-value-name],
+[data-value-email] {
   color: var(--gainsboro);
   font-size: 1rem;
   margin-left: 4px;

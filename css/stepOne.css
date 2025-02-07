@@ -1,7 +1,3 @@
-.first-content {
-  display: block;
-}
-
 .first-content.ativo {
   display: none;
 }

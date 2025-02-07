@@ -27,9 +27,10 @@ const arraySections = [stepOne, stepTwo];
 
 function handleClick(event) {
   if (event) event.preventDefault();
-  arraySections.forEach((elements) => {
-    elements.classList.add(activeClass);
+  arraySections.forEach((steps) => {
+    steps.classList.add(activeClass);
   });
+  verificationValue();
 }
 
 function handleClickTwo(event) {
@@ -38,9 +39,22 @@ function handleClickTwo(event) {
   stepThree.style.display = "block";
 }
 
-function stepSucess(event) {
-  if (event) event.preventDefault();
+function stepSucess() {
   alert("Sucess");
+}
+
+function verificationValue() {
+  const valueName = inputName.value;
+  const valueEmail = inputEmail.value;
+
+  spanValueName.innerText = valueName;
+  spanValueEmail.innerText = valueEmail;
+}
+
+function listLIchecked() {
+  listLI.addEventListener("change", () => {
+    
+  });
 }
 
 if (Array.isArray(events) && events.length > 0) {
