@@ -2,10 +2,6 @@
   display: none;
 }
 
-.third-content.ativo {
-  display: block;
-}
-
 .stepThree {
   background-color: var(--DarkSlateGray) !important;
   width: 500px;
@@ -69,6 +65,12 @@
   margin-left: 4px;
 }
 
+[data-information] {
+  color: #fff;
+  display: inline-block;
+  width: auto;
+}
+
 .list-topics {
   padding: 1.3rem 0 0 1.875rem;
 }
@@ -80,11 +82,12 @@
 .list-topics li a {
   color: var(--gainsboro);
   text-decoration: none;
-}
-
-.list-topics li:first-child {
   margin-bottom: 0.3rem;
 }
+
+/* .list-topics li:first-child {
+  margin-bottom: 0.3rem;
+} */
 
 .list-topics li::marker {
   color: var(--gainsboro);

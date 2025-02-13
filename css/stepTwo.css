@@ -2,10 +2,6 @@
   display: none;
 }
 
-.second-content.ativo {
-  display: block;
-}
-
 .stepTwo {
   background-color: var(--DarkSlateGray) !important;
   width: 500px;

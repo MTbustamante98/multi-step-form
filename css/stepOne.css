@@ -1,7 +1,3 @@
-.first-content.ativo {
-  display: none;
-}
-
 .stepOne {
   background-color: var(--DarkSlateGray) !important;
   width: 500px;
@@ -19,7 +15,7 @@
   left: -2px;
   right: -3px;
   bottom: -3px;
-  border-radius: 15px; /* Deve ser maior que o container */
+  border-radius: 15px;
   background: linear-gradient(
     120deg,
     rgba(229, 231, 235, 0.5) 0.05%,
@@ -66,7 +62,12 @@
 }
 
 input[type=text] {
+  color: var(--gainsboro);
   margin-bottom: 1.25rem;
+}
+
+input[type=email] {
+  color: var(--gainsboro);
 }
 
 input::placeholder {
@@ -74,6 +75,11 @@ input::placeholder {
   font-size: 0.75rem;
   position: absolute;
   left: 15px;
+}
+
+.stepOne .div-btn {
+  transform: translate(0, 40px);
+  padding-bottom: 2.5rem;
 }
 
 .count {

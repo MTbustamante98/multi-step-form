@@ -25,13 +25,13 @@
           <h1>Register</h1>
           <form class="fields">
             <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name"></input>
+            <input type="text" id="name" placeholder="Enter your name" minlength="7" maxlength="30" required>
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Example@gmail.com"></input>
+            <input type="email" id="email" placeholder="Example@gmail.com" required>
+            <div class="div-btn">
+              <button type="submit" class="btn">Continue</button>
+            </div>
           </form>
-          <div class="div-btn">
-            <button class="btnOne">Continue</button>
-          </div>
         </article>
         <div class="count">
           <p>Step<span> 1</span> of 3</p>
@@ -41,7 +41,9 @@
             <span class="dec"></span>
           </div>
         </div>
+        </article>
       </section>
+
       <section class="second-content">
         <article class="stepTwo">
           <h1>Which topics you are interested in?</h1>
@@ -60,10 +62,10 @@
                   <input type="checkbox" id="option3">
                 </li>
               </ul>
+              <div class="div-btn">
+                <button type="submit" class="btn">Continue</button>
+              </div>
           </form>
-          <div class="div-btn">
-            <button class="btnTwo">Continue</button>
-          </div>
         </article>
         <div class="count">
           <p>Step <span>2</span> of 3</p>
@@ -74,6 +76,7 @@
           </div>
         </div>
       </section>
+
       <section class="third-content">
         <article class="stepThree">
           <h1>Summary</h1>
