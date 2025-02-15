@@ -71,23 +71,19 @@
   width: auto;
 }
 
-.list-topics {
+.list-topics.ativo {
   padding: 1.3rem 0 0 1.875rem;
 }
 
-.list-topics ul {
-  padding: 0.325rem 0 2.5rem 1.875rem;
+.list-topics.ativo ul {
+  padding: 0.625rem 0 2rem 1.8rem;
 }
 
-.list-topics li a {
+.list-topics.ativo li {
   color: var(--gainsboro);
   text-decoration: none;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
-
-/* .list-topics li:first-child {
-  margin-bottom: 0.3rem;
-} */
 
 .list-topics li::marker {
   color: var(--gainsboro);
