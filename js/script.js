@@ -67,33 +67,31 @@ function listLIchecked() {
         .filter((li) => li.querySelector("input[type='checkbox']").checked)
         .map((li) => li.querySelector("label").innerText);
 
+      const topicsListContainer = document.querySelector(".list-topics");
+      const topicsList = topicsListContainer.querySelector("ul");
+      if (!topicsList) return;
+
+      topicsList.innerHTML = "";
+
+      selectedTopics.forEach((topic) => {
+        const li = document.createElement("li");
+        li.innerText = topic;
+        topicsList.appendChild(li);
+      });
+
+      topicsListContainer.classList.toggle("ativo", selectedTopics.length > 0);
+
       arrayInformation.forEach((element, index) => {
-        const topicsListContainer = document.querySelector(".list-topics");
-        const topicsList = topicsListContainer.querySelector("ul");
-        if (!topicsList) return;
-
-        topicsList.innerHTML = "";
-
-        selectedTopics.forEach((topic) => {
-          const li = document.createElement("li");
-          li.innerText = topic;
-          topicsList.appendChild(li);
-          topicsListContainer.classList.add("ativo");
-        });
-
-        if (selectedTopics.length === 1) {
-          if (topicsListContainer.length > 1) topicsListContainer[1].style.visibility = "hidden";
-          if (topicsListContainer.length > 2) topicsListContainer[2].style.visibility = "hidden";
-          element.innerText = selectedTopics[index];
-        } else if (selectedTopics.length === 2) {
-          if (topicsListContainer.length > 1) topicsListContainer[1].style.visibility = "visible";
-          if (topicsListContainer.length > 2) topicsListContainer[2].style.visibility = "hidden";
+        if (index < selectedTopics.length) {
           element.innerText = selectedTopics[index];
         } else {
-          if (topicsListContainer.length > 1) topicsListContainer[1].style.visibility = "visible";
-          if (topicsListContainer.length > 2) topicsListContainer[2].style.visibility = "visible";
-          element.innerText = selectedTopics[index];
+          element.innerText = "";
         }
+      });
+
+      const topicItems = topicsList.querySelectorAll("li");
+      topicItems.forEach((li, index) => {
+        li.style.visibility = index < selectedTopics.length ? "visible" : "hidden";
       });
     });
   });
