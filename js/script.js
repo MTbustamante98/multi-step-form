@@ -29,10 +29,10 @@ function updateStep() {
 
 function nextStep(event) {
   if (event) event.preventDefault();
-  // if (!inputName.checkValidity() || !inputEmail.checkValidity()) {
-  //   alert("Please fill in all fields correctly.");
-  //   return;
-  // }
+  if (!inputName.checkValidity() || !inputEmail.checkValidity()) {
+    alert("Please fill in all fields correctly.");
+    return;
+  }
 
   if (currentStep === 1) {
     const selectedTopics = getSelectedTopics();
@@ -43,16 +43,16 @@ function nextStep(event) {
   }
   if (currentStep < stepContainers.length - 1) currentStep++;
   updateStep();
-  // checkValue();
+  checkValue();
 }
 
-// function checkValue() {
-//   const valueName = inputName.value;
-//   const valueEmail = inputEmail.value;
+function checkValue() {
+  const valueName = inputName.value;
+  const valueEmail = inputEmail.value;
 
-//   spanValueName.innerText = valueName;
-//   spanValueEmail.innerText = valueEmail;
-// }
+  spanValueName.innerText = valueName;
+  spanValueEmail.innerText = valueEmail;
+}
 
 function listLIchecked() {
   let listLIarray = [...listLI];
@@ -106,6 +106,9 @@ function getSelectedTopics() {
 
 function stepSucess() {
   alert("Sucess");
+  setTimeout(() => {
+    location.reload();
+  }, 100);
 }
 
 if (Array.isArray(events) && events.length > 0) {

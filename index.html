@@ -21,7 +21,7 @@
   <body>
     <main>
       <section class="first-content">
-        <article class="stepOne">
+        <article class="stepOne" aria-labelledby="stepOneTitle">
           <h1>Register</h1>
           <form class="fields">
             <label for="name">Name</label>
@@ -36,16 +36,16 @@
         <div class="count">
           <p>Step<span> 1</span> of 3</p>
           <div class="information-circle">
-            <span id="startDecStepOne" class="dec"></span>
-            <span class="dec"></span>
-            <span class="dec"></span>
+            <span id="startDecStepOne" class="dec" aria-label="Step 1"  aria-current="step"></span>
+            <span class="dec" aria-label="Step 2"></span>
+            <span class="dec" aria-label="Step 3"></span>
           </div>
         </div>
         </article>
       </section>
 
       <section class="second-content">
-        <article class="stepTwo">
+        <article class="stepTwo" aria-labelledby="stepWichTopicsInterested">
           <h1>Which topics you are interested in?</h1>
           <form class="list">
               <ul>
@@ -70,9 +70,9 @@
         <div class="count">
           <p>Step <span>2</span> of 3</p>
           <div class="information-circle">
-            <span class="dec"></span>
-            <span id="startDecStepTwo" class="dec"></span>
-            <span class="dec"></span>
+            <span class="dec" aria-label="Step 1">></span>
+            <span id="startDecStepTwo" class="dec" aria-label="Step 2" aria-current="step"></span>
+            <span class="dec" aria-label="Step 3"></span>
           </div>
         </div>
       </section>
@@ -80,18 +80,18 @@
       <section class="third-content">
         <article class="stepThree">
           <h1>Summary</h1>
-          <div class="user-information">
+          <div class="user-information" aria-live="polite">
             <p class="p-value">Name: <span data-value-name></span></p>
             <p class="p-value">Email: <span data-value-email></span></p>
           </div>
-          <div class="list-topics">
+          <div class="list-topics" aria-live="polite">
             <p class="p-value">Topics:</p>
             <ul>
-              <li><a href="#" data-information></a>
+              <li><span data-information></span>
               </li>
-              <li><a href="#" data-information></a>
+              <li><span data-information></span>
               </li>
-              <li><a href="#" data-information></a>
+              <li><span data-information></span>
               </li>
             </ul>
           </div>
@@ -102,20 +102,20 @@
         <div class="count">
           <p>Step <span>3</span> of 3</p>
           <div class="information-circle">
-            <span class="dec"></span>
-            <span class="dec"></span>
-            <span id="startDecStepThree" class="dec"></span>
+            <span class="dec" aria-label="Step 1"></span>
+            <span class="dec" aria-label="Step 2"></span>
+            <span id="startDecStepThree" class="dec" aria-label="Step 3" aria-current="step"></span>
           </div>
         </div>
       </section>
+      <div class="author-info">
+        Coded by <a href="#">Matheus Bustamante</a> | Challenge by
+        <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
+          >devChallenges.io</a
+        >.
+      </div>
     </main>
 
-    <!-- <div class="author-info">
-      Coded by <a href="#">Your Name Here</a> | Challenge by
-      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
-        >devChallenges.io</a
-      >.
-    </div> -->
     <script src="dist/main.js"></script>
   </body>
 </html>
