@@ -106,9 +106,7 @@ function getSelectedTopics() {
 
 function stepSucess() {
   alert("Sucess");
-  setTimeout(() => {
-    location.reload();
-  }, 100);
+  location.reload();
 }
 
 if (Array.isArray(events) && events.length > 0) {
